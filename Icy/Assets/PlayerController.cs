@@ -30,9 +30,9 @@ public class PlayerController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.collider2D.tag == "Freezer")
+        if(col.gameObject.tag == "Freezer")
         {
-            frozenPercent += 
+            frozenPercent += freezeFactor * Time.deltaTime;
         }
     }
 }
